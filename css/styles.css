@@ -11,4 +11,140 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  background-color: #fffefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   MTA FORMATTING
+   ========================================================================== */
+/*Format orientation of grid container*/
+.mta-grid-container {
+  background-color: #f3f4f6;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 1em;
+}
+
+/*Format grid items*/
+.mta-grid-item {
+  position: relative;
+  width: 284px;
+  height: 288px;
+  padding: 20px 24px;
+}
+
+/*Format member img to take up container space*/
+.mta-grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/*Put gradient svg overlay over grid item*/
+.mta-grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%22284%22%20height%3D%22144%22%20viewBox%3D%220%200%20284%20144%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22284%22%20height%3D%22144%22%20fill%3D%22url%28%23paint0_linear_2850_19650%29%22%2F%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear_2850_19650%22%20x1%3D%22142%22%20y1%3D%220%22%20x2%3D%22142%22%20y2%3D%22144%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23D9D9D9%22%20stop-opacity%3D%220%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220.8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E")
+    no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+}
+
+/*Format placement of text container*/
+.mta-grid-item .text-container {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  z-index: 2;
+  color: #fffefe;
+}
+
+/*Format text-container title margin bottom*/
+.text-container > h2 {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/*Format member job labels*/
+.text-container > p {
+  color: #f3f4f6;
+}
+
+/*Format bg colors for team members*/
+.liam-bg {
+  background-color: #c1b6f8;
+}
+
+.moretti-bg {
+  background-color: #edacd2;
+}
+
+.rossi-bg {
+  background-color: #9dc4f8;
+}
+
+.ricci-bg {
+  background-color: #f8d8b0;
+}
+
+.conti-bg {
+  background-color: #86e7d4;
+}
+
+/*Format see more container*/
+.see-more-container {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+/*Format see more link*/
+.see-more {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Format intro container*/
+.team-introduction {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22222%22%20height%3D%22404%22%20viewBox%3D%220%200%20222%20404%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M187.549%200H190.58C190.513%200.472552%20190.446%200.940586%20190.381%201.40352L190.381%201.40402L190.381%201.40438C190%204.09174%20189.644%206.60721%20189.299%208.83707C187.426%2020.9433%20185.979%2033.4256%20184.528%2045.9397C184.251%2048.3328%20183.973%2050.7269%20183.693%2053.1199C181.946%2068.0093%20180.079%2082.8397%20177.37%2096.9333C174.444%20112.161%20170.309%20122.63%20165.268%20130.709C160.227%20138.787%20154.33%20144.392%20148.035%20149.917C118.598%20175.756%2085.3511%20180.84%2054.3858%20170.45C40.3244%20165.732%2026.7336%20156.247%2013.3705%20146.445C11.8931%20145.362%2010.4184%20144.274%208.9459%20143.188L8.94212%20143.185L8.94198%20143.185C5.95477%20140.982%202.97611%20138.786%200%20136.64V132.947C3.58832%20135.508%207.15981%20138.142%2010.7179%20140.767L10.7262%20140.773C12.2013%20141.861%2013.6741%20142.948%2015.1448%20144.026C28.5468%20153.857%2041.7845%20163.057%2055.3402%20167.606C85.2886%20177.655%20117.419%20172.8%20146.056%20147.662C152.293%20142.188%20157.92%20136.817%20162.722%20129.121C167.524%20121.427%20171.549%20111.326%20174.424%2096.3671C177.111%2082.3912%20178.967%2067.6567%20180.713%2052.7704C180.993%2050.3858%20181.27%2047.9971%20181.547%2045.6071L181.547%2045.6059C182.997%2033.0932%20184.452%2020.5454%20186.334%208.37847C186.668%206.21849%20187.018%203.75124%20187.394%201.09621L187.394%201.09503C187.445%200.733405%20187.497%200.368293%20187.549%200ZM0%20397.967C1.61346%20395.37%203.29563%20393.045%205.04591%20390.966C12.7574%20381.805%2021.7117%20377.503%2031.6567%20375.656C44.3624%20373.297%2057.075%20374.698%2069.5268%20376.07L69.5275%20376.07C70.062%20376.129%2070.5961%20376.188%2071.1297%20376.246C84.1732%20377.676%2096.9406%20378.9%20109.626%20375.9C119.245%20373.625%20128.819%20367.6%20138.114%20358.84C147.401%20350.088%20156.33%20338.68%20164.664%20325.779C184.181%20295.567%20203.117%20255.197%20209.271%20199.281C212.139%20173.232%20212.808%20146.668%20213.104%20119.941C213.164%20114.491%20213.209%20109.034%20213.254%20103.573V103.572V103.57C213.428%2082.2711%20213.604%2060.9162%20214.704%2039.7479C214.74%2039.054%20214.776%2038.3518%20214.812%2037.6425C215.191%2030.2678%20215.609%2022.1183%20216.484%2014.3809C217.053%209.35096%20217.819%204.44422%202218.911%200H222.003C220.867%204.42246%20220.062%209.44231%20219.465%2014.7179C218.601%2022.359%20218.187%2030.4172%20217.808%2037.8074C217.771%2038.5125%20217.736%2039.2116%20217.7%2039.9036C216.603%2061.0002%20216.429%2082.2714%20216.254%20103.564V103.564C216.209%20109.034%20216.164%20114.505%20216.104%20119.974C215.808%20146.715%20215.138%20173.404%20212.253%20199.61C206.038%20256.075%20186.902%20296.883%20167.184%20327.406C158.769%20340.434%20149.69%20352.053%20140.172%20361.023C130.663%20369.985%20120.635%20376.379%20110.317%20378.82C97.0587%20381.955%2083.7978%20380.653%2070.8028%20379.228C70.3512%20379.179%2069.8999%20379.129%2069.449%20379.08L69.3445%20379.068C56.7754%20377.685%2044.4634%20376.33%2032.2043%20378.606C22.8413%20380.344%2014.5435%20384.342%207.34103%20392.898C4.7597%20395.965%202.30917%20399.629%200%20404.003V397.967Z%22%20fill%3D%22%23FFFEFE%22%2F%3E%3C%2Fsvg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*Format team intro label*/
+.team-introduction span {
+  color: #263fa9;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/*Format introduction heading*/
+.team-introduction h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/*Format body text*/
+.team-introduction p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #394150;
 }

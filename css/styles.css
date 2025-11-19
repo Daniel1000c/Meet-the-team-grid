@@ -148,3 +148,68 @@ main {
   font-weight: 400;
   color: #394150;
 }
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+/*Tablet Query*/
+@media screen and (min-width: 48em) and (max-width: 64em) {
+  /*Format grid container*/
+  .mta-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3 1fr);
+  }
+
+  /*Have the team introduction container to span three columns*/
+  .team-introduction {
+    grid-column: span 3;
+  }
+
+  .see-more-container {
+    grid-row: 3;
+  }
+
+  /*Format bottom right raidus of conti container*/
+  .conti-bg {
+    border-bottom-right-radius: 1em;
+  }
+
+  /*Format overlay radius*/
+  .conti-bg .overlay {
+    border-bottom-right-radius: 1em;
+  }
+}
+
+/*Desktop Media query*/
+@media screen and (min-width: 75em) {
+  /*Create 4 column grid*/
+  .mta-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: repeat(2, 1fr);
+  }
+
+  /*Format team intro take two column span*/
+  .team-introduction {
+    grid-column: span 2;
+  }
+
+  /*Change position of see members*/
+  .see-more-container {
+    grid-row: 2;
+  }
+
+  /*Format border radius of conti bg*/
+  .conti-bg {
+    border-bottom-right-radius: 1em;
+  }
+
+  .conti-bg .overlay {
+    border-bottom-right-radius: 1em;
+  }
+
+  /*Format top right radius of moretti*/
+  .moretti-bg {
+    border-top-right-radius: 1em;
+  }
+}
